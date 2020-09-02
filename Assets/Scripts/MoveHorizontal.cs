@@ -4,17 +4,14 @@ using UnityEngine;
 
 public class MoveHorizontal : MonoBehaviour
 {
-    // how fast you move left and right
     public float moveSpeed = 5f;
     Rigidbody2D rb;
 
-    void Start()
-    {
+    void Start() {
         rb = GetComponent<Rigidbody2D>();
     }
 
-    void FixedUpdate()
-    {
+    void FixedUpdate() {
         // update the velocity based on horizontal movement and moveSpeed
         rb.velocity = new Vector2(Input.GetAxis("Horizontal") * moveSpeed, rb.velocity.y);
     }

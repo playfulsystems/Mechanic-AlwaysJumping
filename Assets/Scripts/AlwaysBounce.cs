@@ -13,9 +13,9 @@ public class AlwaysBounce : MonoBehaviour
         rb = GetComponent<Rigidbody2D>(); 
     }
 
-	private void OnCollisionEnter2D(Collision2D collision)
-	{
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
         // when you collide with anything, give it a velocity up
         rb.velocity = new Vector2(rb.velocity.x, jumpVelocity);
-	}
+    }
 }
